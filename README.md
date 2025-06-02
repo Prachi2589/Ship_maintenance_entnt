@@ -8,13 +8,13 @@ The **Ship Maintenance Dashboard** is a React-based frontend application develop
 
 ## Live Demo
 
-[Deployed Application Link](YOUR_DEPLOYED_LINK_HERE)
+[Deployed Application Link](ship-maintenance-entnt-ten.vercel.app)
 
 ---
 
 ## GitHub Repository
 
-[GitHub Repo Link](YOUR_GITHUB_REPO_LINK_HERE)
+[GitHub Repo Link]([YOUR_GITHUB_REPO_LINK_HERE](https://github.com/Prachi2589/Ship_maintenance_entnt/))
 
 ---
 
@@ -69,38 +69,7 @@ The **Ship Maintenance Dashboard** is a React-based frontend application develop
 
 ---
 
-## Project Structure
 
-src/
-├── components/
-│ ├── Authentication/
-│ ├── Dashboard/
-│ ├── Ships/
-│ ├── Components/
-│ ├── Jobs/
-│ ├── Notifications/
-├── contexts/
-│ ├── AuthContext.jsx
-│ ├── ShipsContext.jsx
-│ ├── ComponentsContext.jsx
-│ ├── JobsContext.jsx
-├── pages/
-│ ├── LoginPage.jsx
-│ ├── DashboardPage.jsx
-│ ├── ShipsPage.jsx
-│ ├── ShipDetailPage.jsx
-│ ├── JobsPage.jsx
-├── utils/
-│ ├── localStorageUtils.js
-│ ├── roleUtils.js
-├── App.jsx
-├── index.js
-└── styles/
-└── main.css
-
-yaml
-Copy
-Edit
 
 ---
 
@@ -136,6 +105,8 @@ npm install
 
 ```bash
 npm start
+---
+
 
 ##User Credentials
 
