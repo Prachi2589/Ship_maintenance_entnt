@@ -1,0 +1,227 @@
+.inspector-kpi-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+  font-family: 'Inter', sans-serif;
+  color: #1f2937;
+  box-sizing: border-box;
+  margin-top: 10px; /* Added px unit */
+}
+
+.inspector-kpi-container h2 {
+  text-align: center;
+  font-size: 30px;
+  color: #111827;
+  margin-bottom: 25px;
+}
+
+.inspector-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.inspector-controls label {
+  font-weight: 600;
+}
+
+.inspector-controls select {
+  padding: 8px 14px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  background-color: #f9fafb;
+  color: #111827;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.inspector-controls select:focus {
+  border-color: #3b82f6;
+}
+
+.inspector-charts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.inspector-chart-card {
+  flex: 1 1 48%;
+  background-color: #f9fafb;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s;
+  height: 350px; /* Ensures equal height for both charts */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inspector-chart-card:hover {
+  transform: translateY(-4px);
+}
+
+.inspector-chart-card canvas {
+  width: 320px !important;
+  height: 100% !important;
+}
+
+.inspector-stats {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f3f4f6;
+  border-radius: 16px;
+  font-size: 16px;
+  color: #374151;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap; /* allows wrapping on small screens */
+  gap: 20px;
+  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.03);
+}
+
+.inspector-stats p {
+  margin: 0;
+  font-weight: 500;
+}
+
+.download-btn {
+  margin: 20px 0 40px 0;
+  background-color: #2563eb; /* blue */
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.download-btn:hover {
+  background-color: #1e40af; /* darker blue */
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 1024px) {
+  .inspector-kpi-container {
+    padding: 20px;
+  }
+
+  .inspector-kpi-container h2 {
+    font-size: 26px;
+  }
+
+  .inspector-controls {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .inspector-chart-card {
+    flex: 1 1 100%;
+    height: 320px;
+  }
+
+  .inspector-chart-card canvas {
+    width: 280px !important;
+  }
+
+  .inspector-stats {
+    font-size: 15px;
+  }
+}
+
+/* Small screens (phones) */
+@media (max-width: 768px) {
+  .inspector-kpi-container {
+    padding: 16px;
+    margin: 20px 10px;
+  }
+
+  .inspector-kpi-container h2 {
+    font-size: 22px;
+  }
+
+  .inspector-controls {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .inspector-controls select {
+    width: 100%;
+  }
+
+  .inspector-chart-card {
+    flex: 1 1 100%;
+    height: 280px;
+  }
+
+  .inspector-chart-card canvas {
+    width: 240px !important;
+  }
+
+  .inspector-stats {
+    flex-direction: column;
+    gap: 15px;
+    font-size: 14px;
+  }
+}
+
+/* Extra-small screens (very small phones, <480px) */
+@media (max-width: 480px) {
+  .inspector-kpi-container {
+    padding: 12px;
+    margin: 10px 5px;
+  }
+
+  .inspector-kpi-container h2 {
+    font-size: 18px;
+  }
+
+  .inspector-controls {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+  }
+
+  .inspector-controls label {
+    font-size: 14px;
+  }
+
+  .inspector-controls select {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+
+  .inspector-chart-card {
+    flex: 1 1 100%;
+    height: 240px;
+    padding: 15px;
+  }
+
+  .inspector-chart-card canvas {
+    width: 200px !important;
+  }
+
+  .inspector-stats {
+    flex-direction: column;
+    gap: 10px;
+    font-size: 13px;
+    padding: 15px;
+  }
+
+  .inspector-stats p {
+    text-align: center;
+  }
+}

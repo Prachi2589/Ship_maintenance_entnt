@@ -1,0 +1,93 @@
+/* Background suited for Ship Maintenance theme */
+.login-container {
+  background: linear-gradient(to right, #00203f, #00587a); /* navy blue to deep sea blue */
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Logo + Brand name top left */
+.top-left-brand {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.logo {
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+}
+
+.brand-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Login Box */
+.login-box {
+    background-color: white;
+    padding: 40px 30px;
+    border: 2px solid #d1d5db;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 460px;         /* Increased from 400px to 460px */
+    text-align: center;
+    margin-right: -30px;      /* Shifts box slightly toward the right */
+  }
+  .login-box input[type="email"],
+  .login-box input[type="password"] {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    box-sizing: border-box;
+  }
+    
+
+.login-title {
+  font-size: 24px;
+  color: #00587a;
+  margin-bottom: 20px;
+}
+
+/* Inputs and button */
+.login-input {
+  width: 100%;
+  padding: 10px 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.login-button {
+  width: 100%;
+  background-color: #00587a;
+  color: white;
+  padding: 10px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.login-button:hover {
+  background-color: #003f5c;
+}
+
+.error-text {
+  color: red;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}

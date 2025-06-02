@@ -1,0 +1,228 @@
+.login-page {
+  background: url('/images/ship.jpg') no-repeat center center;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+}
+
+.login-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* Dark overlay */
+  z-index: 0;
+}
+
+.login-page > * {
+  position: relative;
+  z-index: 1;
+}
+
+.login-page .top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  background-color: transparent;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  left: -400px;
+  margin-top: -90px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+.logo:hover {
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
+}
+
+.project-name {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  background: none;
+  background-color: transparent;
+  padding: 0;
+  box-shadow: none;
+  border: none;
+}
+
+.login-box {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 30px 40px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  max-width: 450px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.login-box input[type="email"],
+.login-box input[type="password"] {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  box-sizing: border-box;
+}
+
+.login-box h2 {
+  margin-bottom: 20px;
+  color: #055ed3;
+  text-align: center;
+}
+
+.role-switch {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.role-switch button {
+  flex: 1;
+  margin: 0 4px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #909cab;
+  color: #3d4a5e;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.role-switch button.active-role {
+  background-color: #eb25d4;
+  color: white;
+}
+
+.login-box label {
+  display: block;
+  font-size: 0.875rem;
+  color: #374151;
+  margin-bottom: 6px;
+}
+
+.input-box {
+  width: 95%;
+  padding: 10px 14px;
+  margin-bottom: 16px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.login-btn {
+  width: 100%;
+  background-color: #1d4ed8;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background-color: #1e40af;
+}
+
+.error {
+  color: #dc2626;
+  font-size: 0.875rem;
+  margin-bottom: 10px;
+}
+
+/* Extra-small devices (phones <480px) */
+@media (max-width: 480px) {
+  .kpi-container {
+    padding: 10px;
+  }
+
+  .kpi-container h2 {
+    font-size: 1.4rem;
+  }
+
+  .time-selector {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .time-selector label,
+  .time-selector select {
+    width: 100%;
+  }
+
+  .chart-card {
+    width: 100%;
+    height: 280px;
+    padding: 12px;
+  }
+
+  .health-index {
+    font-size: 16px;
+  }
+}
+
+/* Small devices (phones and small tablets up to 768px) */
+@media (max-width: 768px) {
+  .kpi-container {
+    padding: 15px;
+  }
+
+  .charts-wrapper {
+    justify-content: center;
+  }
+
+  .chart-card {
+    width: 100%;
+    height: 300px;
+  }
+
+  .kpi-container h2 {
+    font-size: 1.6rem;
+  }
+
+  .time-selector {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .time-selector label,
+  .time-selector select {
+    width: 100%;
+  }
+}
+
+/* Medium to large screens (768px to 1199px) */
+@media (min-width: 769px) and (max-width: 1199px) {
+  .chart-card {
+    width: 45%;
+    height: 330px;
+  }
+}
+
+/* Large screens (1200px and up) */
+@media (min-width: 1200px) {
+  .charts-wrapper {
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  .chart-card {
+    width: 380px;
+  }
+}

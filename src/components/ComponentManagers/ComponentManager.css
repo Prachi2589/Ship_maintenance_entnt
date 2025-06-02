@@ -1,0 +1,334 @@
+/* Base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #e0f0ff, #f9fbfd);
+  overflow-x: hidden;
+  color: #222;
+}
+
+.component-manager {
+  max-width: 96vw;
+  margin: 1.5rem auto;
+  padding: 2.5rem 3rem;
+  background: #ffffffcc;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+}
+
+/* Responsive form container */
+.component-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.component-form input,
+.component-form select {
+  flex: 1 1 220px;
+  min-width: 150px;
+  padding: 0.7rem 1rem;
+  border: 2px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  background-color: #fafafa;
+}
+
+.component-form input:focus,
+.component-form select:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 8px #3b82f6aa;
+  outline: none;
+}
+
+.component-form button {
+  flex: 1 1 120px;
+  padding: 0.7rem 1.2rem;
+  background: linear-gradient(90deg, #2563eb, #3b82f6);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.component-form button:hover {
+  background: linear-gradient(90deg, #1e40af, #2563eb);
+}
+
+/* Table styles */
+.component-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 0.8rem;
+  background-color: transparent;
+}
+
+.component-table th,
+.component-table td {
+  padding: 1.25rem 1.5rem;
+  text-align: left;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+  vertical-align: middle;
+}
+
+.component-table th {
+  background: #2563eb;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  box-shadow: none;
+  border-radius: 12px 12px 0 0;
+}
+
+.delete-button {
+  background-color: #ef4444;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 2px 5px rgba(239, 68, 68, 0.6);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.delete-button:hover {
+  background-color: #b91c1c;
+  box-shadow: 0 4px 10px rgba(185, 28, 28, 0.7);
+}
+
+/* Inspection Section */
+.component-inspection {
+  padding: 2rem 2.5rem;
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+  margin-top: 2rem;
+}
+
+.inspection-heading {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1e40af;
+  text-align: center;
+  margin-bottom: 1.75rem;
+  letter-spacing: 0.03em;
+}
+
+.inspection-controls {
+  margin-bottom: 2rem;
+}
+
+.label {
+  display: block;
+  margin-top: 1.2rem;
+  font-weight: 700;
+  color: #374151;
+  font-size: 1.05rem;
+}
+
+.select,
+.textarea {
+  width: 100%;
+  padding: 0.85rem 1.2rem;
+  margin-top: 0.5rem;
+  border: 2px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 1.05rem;
+  background-color: #fafafa;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  font-family: inherit;
+  resize: vertical;
+  min-height: 3rem;
+}
+
+.select:focus,
+.textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 10px #2563eb88;
+  outline: none;
+}
+
+.submit-btn {
+  margin-top: 1.5rem;
+  padding: 0.85rem 2rem;
+  background: linear-gradient(90deg, #2563eb, #3b82f6);
+  border: none;
+  color: white;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 700;
+  transition: background 0.3s ease;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background: linear-gradient(90deg, #1e40af, #2563eb);
+}
+
+.submit-btn:disabled {
+  background-color: #a1a1aa;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.error-message {
+  margin-top: 12px;
+  padding: 14px 20px;
+  background-color: #fee2e2;
+  color: #b91c1c;
+  border: 1.5px solid #fca5a5;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  box-shadow: 0 1px 4px #fca5a58a;
+}
+
+/* Inspection History */
+.inspection-history {
+  margin-top: 3rem;
+}
+
+.history-heading {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #1e40af;
+  margin-bottom: 1.25rem;
+  letter-spacing: 0.02em;
+}
+
+.inspection-history ul {
+  list-style: none;
+  padding: 0;
+}
+
+.inspection-history li {
+  background: white;
+  padding: 18px 20px;
+  margin-bottom: 15px;
+  border-radius: 14px;
+  border-left: 6px solid #2563eb;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
+  transition: transform 0.2s ease;
+}
+
+.inspection-history li:hover {
+  transform: translateX(5px);
+}
+
+.inspection-history li strong {
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+  color: #1e40af;
+}
+
+.inspection-history li p {
+  font-size: 1rem;
+  margin-top: 6px;
+  color: #4b5563;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .component-manager {
+    padding: 1.5rem 2rem;
+  }
+
+  .component-form,
+  .component-table,
+  .component-inspection {
+    padding: 1rem 1rem;
+  }
+
+  .inspection-heading {
+    font-size: 1.75rem;
+  }
+
+  .label,
+  .select,
+  .textarea {
+    font-size: 1rem;
+  }
+
+  .submit-btn {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .inspection-history li strong {
+    font-size: 1.1rem;
+  }
+
+  .inspection-history li p {
+    font-size: 0.95rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .component-manager {
+    padding: 1rem 1.2rem;
+  }
+
+  .component-form,
+  .component-table,
+  .component-inspection {
+    padding: 1rem 0.75rem;
+  }
+
+  .inspection-heading {
+    font-size: 1.4rem;
+  }
+
+  .component-form input,
+  .component-form select,
+  .component-form button {
+    width: 100%;
+    margin: 0.6rem 0;
+  }
+
+  .label {
+    font-size: 0.95rem;
+  }
+
+  .select,
+  .textarea {
+    font-size: 0.95rem;
+    padding: 0.7rem 1rem;
+  }
+
+  .submit-btn {
+    width: 100%;
+    padding: 0.7rem 1.2rem;
+    font-size: 1rem;
+  }
+
+  .history-heading {
+    font-size: 1.2rem;
+  }
+
+  .inspection-history li {
+    padding: 14px 18px;
+  }
+
+  .inspection-history li strong {
+    font-size: 1rem;
+  }
+
+  .inspection-history li p {
+    font-size: 0.9rem;
+  }
+}

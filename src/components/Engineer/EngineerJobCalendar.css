@@ -1,0 +1,218 @@
+/* EngineerJobCalendar.css */
+
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f8f8f8;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.engineer-job-calendar {
+  background-color: #fff;
+  padding: 30px 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  color: #333;
+  max-width: 100%;
+  margin: 30px auto;
+  transition: box-shadow 0.3s ease;
+}
+
+.engineer-job-calendar:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.12);
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: #2980b9;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.job-list-on-date {
+  margin-top: 20px;
+}
+
+.job-list-on-date ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.job-list-on-date li {
+  background-color: #ecf0f1;
+  padding: 12px 15px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: default;
+}
+
+.job-list-on-date li:hover {
+  background-color: #d5dbdb;
+  transform: translateX(4px);
+}
+
+.job-list-on-date strong {
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+.job-list-on-date em {
+  font-style: italic;
+  color: #7f8c8d;
+}
+
+.react-calendar {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 12px;
+  max-width: 100%;
+  user-select: none;
+}
+
+.react-calendar__tile {
+  border-radius: 50%;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  padding: 10px 0;
+  font-weight: 500;
+}
+
+.react-calendar__tile:enabled:hover {
+  background-color: #2980b9;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(41, 128, 185, 0.4);
+}
+
+.react-calendar__tile--now {
+  background-color: #f39c12;
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 0 6px rgba(243, 156, 18, 0.7);
+}
+
+.react-calendar__tile--active {
+  background-color: #2980b9;
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 0 8px rgba(41, 128, 185, 0.8);
+}
+
+/* Ensuring non-selected dates remain black */
+.react-calendar__tile--not-selected {
+  color: #000 !important;
+}
+
+/* Job status styles */
+.react-calendar__tile--completed {
+  background-color: #2ecc71;
+  color: #fff;
+  font-weight: 600;
+}
+
+.react-calendar__tile--in-progress {
+  background-color: #f39c12;
+  color: #fff;
+  font-weight: 600;
+}
+
+.react-calendar__tile--issue {
+  background-color: #e74c3c;
+  color: #fff;
+  font-weight: 600;
+}
+
+.react-calendar__tile--delayed {
+  background-color: #9b59b6;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Status label styles */
+.status-completed,
+.status-in-progress,
+.status-issue,
+.status-delayed,
+.status-pending {
+  padding: 6px 10px;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: 600;
+  display: inline-block;
+  margin: 4px 0;
+  font-size: 0.875rem;
+  user-select: none;
+}
+
+.status-completed {
+  background-color: #2ecc71;
+}
+
+.status-in-progress {
+  background-color: #f39c12;
+}
+
+.status-issue {
+  background-color: #e74c3c;
+}
+
+.status-delayed {
+  background-color: #9b59b6;
+}
+
+.status-pending {
+  background-color: #95a5a6;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .engineer-job-calendar {
+    padding: 20px 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  .job-list-on-date ul {
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .engineer-job-calendar {
+    padding: 15px 1rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  .react-calendar {
+    font-size: 0.8rem;
+  }
+
+  .job-list-on-date li {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+}

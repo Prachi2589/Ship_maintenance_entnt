@@ -1,0 +1,108 @@
+.ship-calendar-container {
+  width: 100%;
+  margin: 2rem auto;
+  padding: 2rem 1.5rem;
+  background: linear-gradient(to bottom right, #e0f7ff, #f0faff);
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+  overflow-x: auto;
+}
+
+.calendar-title {
+  text-align: center;
+  color: #003366;
+  margin-top: 20px;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.section-heading {
+  margin-top: 2rem;
+  color: #003366;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 0.4rem;
+  font-weight: 600;
+  font-size: 1.25rem;
+  letter-spacing: 0.3px;
+}
+
+.ship-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.ship-table thead {
+  background-color: #003366;
+  color: #ffffff;
+}
+
+.ship-table th,
+.ship-table td {
+  padding: 0.85rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.ship-table tbody tr:nth-child(even):not(.ship-priority-high):not(.ship-priority-medium):not(.ship-priority-low) {
+  background-color: #f9fcff;
+}
+
+.ship-priority-high {
+  background-color: #ff4d4f; /* bright red */
+  color: white;
+  font-weight: 600;
+}
+
+.ship-priority-medium {
+  background-color: #ffd666; /* warm amber */
+  font-weight: 500;
+}
+
+.ship-priority-low {
+  background-color: #b7eb8f; /* soft green */
+  font-weight: 500;
+}
+
+.no-ships-text {
+  padding: 1rem;
+  font-style: italic;
+  color: #666;
+  text-align: center;
+  background-color: #fff3cd;
+  border-radius: 6px;
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .ship-calendar-container {
+    padding: 1rem;
+  }
+
+  .calendar-title {
+    font-size: 1.6rem;
+  }
+
+  .section-heading {
+    font-size: 1.1rem;
+  }
+
+  .ship-table th,
+  .ship-table td {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.85rem;
+  }
+
+  .ship-table {
+    font-size: 0.9rem;
+  }
+}

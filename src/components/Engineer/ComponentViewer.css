@@ -1,0 +1,124 @@
+/* ComponentViewer.css */
+
+/* Container for the component viewer */
+.component-viewer {
+  background-color: #fff;
+  padding: 2rem 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+  color: #333;
+  max-width: 100%;
+  margin: 2rem auto;
+  transition: box-shadow 0.3s ease;
+}
+
+.component-viewer:hover {
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Title styling */
+.component-viewer h2 {
+  text-align: center;
+  font-size: 2.25rem;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+/* Component list styling */
+.component-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  justify-content: space-between;
+}
+
+/* Individual component card styling */
+.component-card {
+  background-color: #ecf0f1;
+  padding: 1.25rem 1.5rem;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+  cursor: default;
+}
+
+.component-card:hover {
+  background-color: #d5dbdb;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+/* Component card heading */
+.component-card h3 {
+  font-size: 1.6rem;
+  color: #2980b9;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+/* Component card details */
+.component-card p {
+  margin: 0.3rem 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: left;
+  color: #34495e;
+}
+
+.component-card p strong {
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+/* Tablet Screens (≤768px) */
+@media screen and (max-width: 768px) {
+  .component-viewer {
+    padding: 1.25rem 1rem;
+    margin: 1.25rem 0.5rem;
+  }
+
+  .component-viewer h2 {
+    font-size: 1.8rem;
+  }
+
+  .component-list {
+    justify-content: center;
+  }
+
+  .component-card {
+    max-width: 100%;
+  }
+
+  .component-card h3 {
+    font-size: 1.4rem;
+  }
+}
+
+/* Mobile Screens (≤480px) */
+@media screen and (max-width: 480px) {
+  .component-viewer {
+    padding: 1rem 0.75rem;
+    margin: 1rem 0.5rem;
+  }
+
+  .component-viewer h2 {
+    font-size: 1.5rem;
+  }
+
+  .component-card {
+    padding: 1rem 1rem;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .component-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .component-card p {
+    font-size: 0.95rem;
+  }
+}

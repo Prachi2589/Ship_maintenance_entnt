@@ -1,0 +1,177 @@
+/* Global Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #e0f7fa, #f1f8e9);
+  color: #333;
+  overflow-x: hidden;
+}
+
+/* Job Calendar Container */
+.job-calendar-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+.calendar-title {
+  text-align: center;
+  color: #00695c;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Date Picker */
+.date-picker {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.date-input {
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  width: fit-content;
+}
+
+/* Popup */
+.calendar-popup {
+  position: absolute;
+  top: 80px;
+  z-index: 999;
+  background: #ffffff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 1.5rem;
+  overflow-x: auto;
+}
+
+/* Section Heading */
+.section-heading {
+  font-size: 1.2rem;
+  color: #00796b;
+  border-left: 5px solid #00796b;
+  padding-left: 0.75rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+/* Job Table */
+.job-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+
+.job-table thead {
+  background-color: #00796b;
+  color: white;
+}
+
+.job-table th,
+.job-table td {
+  padding: 0.9rem;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+.job-table tbody tr:nth-child(even):not(.job-priority-high):not(.job-priority-medium):not(.job-priority-low) {
+  background-color: #f1f8f9;
+}
+
+/* Priority Colors */
+.job-priority-high {
+  background-color: #ef5350;
+  color: white;
+}
+
+.job-priority-medium {
+  background-color: #ffa726;
+  color: #000;
+}
+
+.job-priority-low {
+  background-color: #dce775;
+  color: #000;
+}
+
+.no-jobs-text {
+  padding: 1rem;
+  font-style: italic;
+  color: #777;
+}
+
+/* Calendar Date Styles */
+.calendar-popup .date-picker .date {
+  padding: 8px;
+  text-align: center;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.calendar-popup .date-picker .date.weekend {
+  color: crimson;
+}
+
+.calendar-popup .date-picker .date.prev-month {
+  color: #999;
+}
+
+.calendar-popup .date-picker .date:not(.weekend):not(.prev-month) {
+  color: #333;
+}
+
+/* Responsive Layouts */
+@media (max-width: 1024px) {
+  .job-calendar-container {
+    padding: 1.5rem;
+  }
+
+  .date-input {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .job-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .date-input {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .calendar-title {
+    font-size: 1.5rem;
+  }
+
+  .date-input {
+    font-size: 0.85rem;
+    padding: 0.5rem;
+  }
+
+  .section-heading {
+    font-size: 1rem;
+  }
+}

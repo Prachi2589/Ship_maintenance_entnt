@@ -1,0 +1,224 @@
+.user-management-card {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px 35px;
+  background: #f0f4f8; /* softer background */
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(50, 50, 93, 0.1), 0 10px 20px rgba(0, 0, 0, 0.07);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+h2 {
+  text-align: center;
+  font-size: 30px;
+  color: #222f3e;
+  margin-bottom: 30px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.add-user-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.add-user-form input,
+.add-user-form select {
+  padding: 14px 18px;
+  font-size: 16px;
+  border-radius: 12px;
+  border: 1.8px solid #cbd5e1;
+  background-color: #ffffff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+  font-weight: 500;
+}
+
+.add-user-form input:focus,
+.add-user-form select:focus {
+  border-color: #4f46e5;
+  outline: none;
+  box-shadow: 0 0 8px rgba(79, 70, 229, 0.5);
+  background-color: #fff;
+}
+
+.add-user-form button {
+  background-color: #4f46e5;
+  color: #f9fafb;
+  padding: 14px 18px;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 5px 15px rgba(79, 70, 229, 0.4);
+}
+
+.add-user-form button:hover {
+  background-color: #4338ca;
+  box-shadow: 0 8px 20px rgba(67, 56, 202, 0.6);
+}
+
+.error {
+  color: #e63946;
+  font-size: 15px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.user-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.user-entry {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  padding: 16px 20px;
+  margin-bottom: 14px;
+  border-radius: 14px;
+  transition: box-shadow 0.25s ease, transform 0.15s ease;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.user-entry:hover {
+  box-shadow: 0 10px 20px rgba(79, 70, 229, 0.15);
+  transform: translateY(-2px);
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-email {
+  font-weight: 600;
+  color: #1e293b;
+  font-size: 16px;
+}
+
+.user-role {
+  font-size: 14px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-top: 6px;
+  display: inline-block;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Updated role colors with pastel tones */
+.user-role.admin {
+  background-color: #f9e2ae;
+  color: #a96e00;
+}
+
+.user-role.inspector {
+  background-color: #b7f0d4;
+  color: #0b5139;
+}
+
+.user-role.engineer {
+  background-color: #a4c8ff;
+  color: #1e40af;
+}
+
+.user-role.manager {
+  background-color: #f9d976;
+  color: #6b4b0a;
+}
+
+.remove-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  color: #ef4444;
+  cursor: pointer;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.remove-btn:hover {
+  transform: scale(1.3);
+  color: #b91c1c;
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+  .user-management-card {
+    padding: 20px 15px;
+    margin: 20px 10px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .add-user-form input,
+  .add-user-form select,
+  .add-user-form button {
+    font-size: 14px;
+    padding: 12px 14px;
+  }
+
+  .user-entry {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .remove-btn {
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 768px) {
+  .user-management-card {
+    padding: 28px 25px;
+    margin: 30px 20px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  .add-user-form input,
+  .add-user-form select,
+  .add-user-form button {
+    font-size: 15px;
+    padding: 13px 16px;
+  }
+
+  .user-entry {
+    flex-direction: row;
+    gap: 16px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .user-management-card {
+    max-width: 800px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  .add-user-form input,
+  .add-user-form select,
+  .add-user-form button {
+    font-size: 17px;
+    padding: 15px 20px;
+  }
+}
