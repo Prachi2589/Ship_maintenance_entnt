@@ -5,7 +5,6 @@
 The **Ship Maintenance Dashboard** is a React-based frontend application developed as an internal tool for ENTNT to manage ships, their components, and associated maintenance jobs. This project simulates a full maintenance workflow including user authentication, role-based access, ships and components management, maintenance jobs tracking, calendar scheduling, notifications, and KPI dashboards — all powered entirely through localStorage, without any backend integration.
 
 ---
-
 ## Live Demo
 
 [Deployed Application Link](ship-maintenance-entnt-ten.vercel.app)
